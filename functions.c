@@ -13,6 +13,7 @@
  */
 int print_char(va_list types, char buffer[],
 	int a, int b, int d, int e)
+	;
 {
 	char c = va_arg(types, int);
 

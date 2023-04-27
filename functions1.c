@@ -46,7 +46,6 @@ int print_unsigned(va_list types, char buffer[],
 int print_octal(va_list types, char buffer[],
 	int fgs, int wd, int prn, int sz)
 {
-
 	int a = BUFF_SIZE - 2;
 	unsigned long int x = va_arg(types, unsigned long int);
 	unsigned long int init_x = x;
@@ -88,9 +87,8 @@ int print_hexadecimal(va_list types, char buffer[],
 	int fgs, int wd, int prn, int sz)
 {
 	return (print_hexa(types, "0123456789abcdef", buffer,
-		fgs, 'x', wd, prn, sz));
+				fgs, 'x', wd, prn, sz));
 }
-
 /**
  * print_hexa_upper - ...
  * @types: ...
@@ -107,7 +105,6 @@ int print_hexa_upper(va_list types, char buffer[],
 	return (print_hexa(types, "0123456789ABCDEF", buffer,
 		fgs, 'X', wd, prn, sz));
 }
-
 /**
  * print_hexa - ...
  * @types: ...
