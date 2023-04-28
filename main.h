@@ -57,27 +57,27 @@ int print_int(va_list types, char buffer[],
 int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_unsigned(va_list types, char buffer[],
-	int fg, int wd, int prn, int s);
+	int flags, int width, int precision, int size);
 int print_octal(va_list types, char buffer[],
-	int fgs, int wd, int prn, int sz);
+	int flags, int width, int precision, int size);
 int print_hexadecimal(va_list types, char buffer[],
-	int fgs, int wd, int prn, int sz);
+	int flags, int width, int precision, int size);
 int print_hexa_upper(va_list types, char buffer[],
-	int fgs, int wd, int prn, int s);
+	int flags, int width, int precision, int size);
 int print_hexa(va_list types, char map_to[],
-char buffer[], int fgs, char fg_ch, int wd, int prn, int size);
+char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 /* Function to print non printable characters */
 int print_non_printable(va_list types, char buffer[],
-	int fgs, int wd, int precsn, int size);
+	int flags, int width, int precision, int size);
 
 /* Funcion to print memory address */
 int print_pointer(va_list types, char buffer[],
-	int fgs, int wd, int precsn, int sz);
+	int flags, int width, int precision, int size);
 
 /* Funciotns to handle other specifiers */
 int get_flags(const char *format, int *a);
-int get_width(const char *fmt, int *a, va_list ls;
+int get_width(const char *fmt, int *a, va_list ls);
 int get_precision(const char *format, int *a, va_list ls);
 int get_size(const char *fmt, int *l);
 
